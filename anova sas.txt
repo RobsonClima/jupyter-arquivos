@@ -1,0 +1,39 @@
+data SUCOS;
+input suco $ NaOH;
+cards;
+Maca 8.2
+Maca 10.8
+Maca 10.3
+Maca 7.7
+Maca 9.2
+Maca 9.0
+Maca 8.5
+Uva 7.8
+Uva 6.3
+Uva 6.7
+Uva 9.2
+Uva 6.5
+Uva 8.0
+Uva 7.9
+Laranja 4.8
+Laranja 4.3
+Laranja 4.7
+Laranja 4.6
+Laranja 4.5
+Laranja 4.6
+Laranja 4.5
+Manga 3.7
+Manga 2.5
+Manga 1.6
+Manga 1.8
+Manga 1.9
+Manga 1.1
+Manga 1.4
+Manga 1.3
+;
+proc ANOVA;    
+class suco;
+model NaOH=suco;
+means suco/ tukey lines;
+run;
+S
